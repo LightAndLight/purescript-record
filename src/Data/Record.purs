@@ -16,8 +16,8 @@ foreign import restrict
    . IsSymbol label
   => RowCons label a tail result
   => SProxy label
-  -> Record tail
   -> Record result
+  -> Record tail
 
 -- | Record extension
 foreign import extend
