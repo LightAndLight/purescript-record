@@ -11,6 +11,7 @@ install:
   stage: install
   script:
     - npm install purescript bower pulp
+    - export PATH=$PATH:$(npm bin)
     - bower install
 
 build:
