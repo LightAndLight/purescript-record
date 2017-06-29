@@ -33,7 +33,7 @@ github:
   script:
     - git config push.default matching
     - git remote add github https://lightandlight:$GITHUB_TOKEN@github.com/lightandlight/purescript-records.git
-    - git push github --all
+    - git push github master --tags
     
 # publish:
 #   stage: publish
