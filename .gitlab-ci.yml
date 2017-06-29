@@ -25,7 +25,6 @@ build:
 test:
   stage: test
   script:
-    - pulp test
     - pulp version
     
 github:
