@@ -30,6 +30,7 @@ test:
 github:
   stage: github
   script:
+    - git config push.default matching
     - git push https://lightandlight:$GITHUB_TOKEN@github.com/lightandlight/purescript-records.git
     
 # publish:
