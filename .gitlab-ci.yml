@@ -35,8 +35,8 @@ github:
     - git remote add github https://lightandlight:$GITHUB_TOKEN@github.com/lightandlight/purescript-records.git
     - git push github master --tags
     
-# publish:
-#   stage: publish
-#   script:
-#     - echo "$GITHUB_TOKEN" | pulp login
-#     - pulp publish
+publish:
+  stage: publish
+  script:
+    - echo "$GITHUB_TOKEN" | pulp login
+    - pulp publish --no-push
