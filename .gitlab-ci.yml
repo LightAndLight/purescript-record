@@ -10,7 +10,7 @@ stages:
 install:
   stage: install
   script:
-    - npm install -g purescript bower pulp
+    - npm install purescript bower pulp
     - bower install
 
 build:
