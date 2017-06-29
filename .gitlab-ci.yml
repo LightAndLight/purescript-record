@@ -38,7 +38,6 @@ github:
 publish:
   stage: publish
   only:
-    - master
     - tags
   script:
     - echo "$GITHUB_TOKEN" | pulp login
