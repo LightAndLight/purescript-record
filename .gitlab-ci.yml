@@ -7,23 +7,21 @@ stages:
   - github
   - publish
   
+cache:
+  paths:
+    - bower_components/
+    - output/
+  
 install:
   stage: install
   script:
     - bower install
-  cache:
-    paths:
-      - bower_components/
 
 build:
   stage: build
   script:
     - pulp build
-  cache:
-    paths:
-      - bower_components/
-      - output/
-    
+
 test:
   stage: test
   script:
