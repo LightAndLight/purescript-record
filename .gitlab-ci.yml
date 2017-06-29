@@ -21,6 +21,7 @@ build:
     - pulp build
   cache:
     paths:
+      - bower_components
       - output/
     
 test:
