@@ -25,7 +25,7 @@ build:
 test:
   stage: test
   script:
-    - pulp publish --dry-run
+    - purs publish --dry-run
     
 github:
   stage: github
