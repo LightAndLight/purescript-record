@@ -25,7 +25,8 @@ build:
 test:
   stage: test
   script:
-    - purs publish --dry-run
+    - bower list --json > resolutions.json
+    - purs publish --manifest bower.json --resolutions resolutions.json --dry-run
     
 github:
   stage: github
