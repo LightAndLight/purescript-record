@@ -42,4 +42,4 @@ publish:
   script:
     - echo "$GITHUB_TOKEN" | pulp login
     - git checkout $CI_COMMIT_REF_NAME
-    - pulp publish --no-push
+    - yes | pulp publish --no-push
