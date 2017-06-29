@@ -1,0 +1,36 @@
+image: node
+
+stages:
+  - install
+  - build
+  - test
+  - github
+  - publish
+  
+install:
+  stage: install
+  script:
+    - npm install -g purescript bower pulp
+    - bower install
+
+build:
+  stage: build
+  script:
+    - pulp build
+    
+test:
+  stage: test
+  script:
+    - pulp test
+    - pulp version
+    
+github:
+  stage: github
+  script:
+    - git push https://lightandlight:$GITHUB_TOKEN@github.com/lightandlight/purescript-records.git
+    
+# publish:
+#   stage: publish
+#   script:
+#     - echo "$GITHUB_TOKEN" | pulp login
+#     - pulp publish
