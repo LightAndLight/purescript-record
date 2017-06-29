@@ -11,11 +11,17 @@ install:
   stage: install
   script:
     - bower install
+  cache:
+    paths:
+      - bower_components/
 
 build:
   stage: build
   script:
     - pulp build
+  cache:
+    paths:
+      - output/
     
 test:
   stage: test
